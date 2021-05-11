@@ -15,14 +15,14 @@ public class TwoSumProblem {
 	private static int nums [] = {5,9,2,40,8,16,13,22};
 	private static HashMap<Integer,Integer> hashmap = new HashMap<>();
 	private static int target = 18;
-	private static int compliment;
+	private static int complement;
 	
 	public static void main(String args[]) {
 		for(int i=0;i<nums.length;i++) {  // iterate over the full array
-			compliment = target - nums[i]; // get the difference between the target int and present ith location.
-				if(hashmap.containsKey(compliment))  {// check if the compliment already exists in the map
-					System.out.printf("The two numbers are : %d %d %n",compliment,nums[i]); //if yes we found two numbers that add to the target
-					System.out.printf("Indices are : %d %d %n",hashmap.get(compliment),i);
+			complement = target - nums[i]; // get the difference between the target int and present ith location.
+				if(hashmap.containsKey(complement))  {// check if the compliment already exists in the map
+					System.out.printf("The two numbers are : %d %d %n",complement,nums[i]); //if yes we found two numbers that add to the target
+					System.out.printf("Indices are : %d %d %n",hashmap.get(complement),i);
 				}
 				else {
 						hashmap.put(nums[i], i);  //else put the number in the hashmap
